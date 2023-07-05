@@ -1,0 +1,23 @@
+Steps I've Learnt:
+
+- install pipenv, and django
+- run "pipenv install"
+- start django project by using "django-admin startproject project_name ."
+  - the period at the end suggests that the project shall be created inside the current directory.
+- run a server
+  - either do django-admin runserver
+    - this might not work because settings are not configured inside the manage.py 
+  - or do "python manage.py runserver 9000"
+    - here, 9000 is the port number; by default 8000
+- run the python present inside the virtual env:
+  - "Ctrl + Shift + P" then search "Python: Select interpreter" 
+  - Paste the virtual environment path inside it and add "/bin/python" at the end
+- check out the installed apps inside the settings.py
+  - you can remove apps you don't want
+- create an app using the command "python manage.py startapp anyrandomname"
+  - just add the name inside the original settings.py
+
+
+Few Commands for pipenv:
+- "pipenv --venv"
+> To view the address of the virtual environment.
