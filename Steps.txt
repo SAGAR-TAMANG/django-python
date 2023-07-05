@@ -17,6 +17,16 @@ Steps I've Learnt:
 - create an app using the command "python manage.py startapp anyrandomname"
   - just add the name inside the original settings.py
 
+# Creating a view: A request handler
+- views.py inside the newly created application
+- create the functions there which the user will call as a request
+
+# Configuring a URL for the users to access the functions you just created
+- create url.py (name can be changed) where you will put all the urls together inside the newly created app
+- inside that url.py, you will configure the URLs.
+
+
+
 
 Few Commands for pipenv:
 - "pipenv --venv"
