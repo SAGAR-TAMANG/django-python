@@ -25,7 +25,8 @@ Steps I've Learnt:
 - create url.py (name can be changed) where you will put all the urls together inside the newly created app
 - inside that url.py, you will configure the URLs.
 
-
+# Sending a dictionary through 'views.py' in order to use it inside the html 
+- generally django is not used to create html like that in back, only for example it's showing that
 
 
 Few Commands for pipenv:
