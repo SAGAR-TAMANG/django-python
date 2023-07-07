@@ -28,6 +28,17 @@ Steps I've Learnt:
 # Sending a dictionary through 'views.py' in order to use it inside the html 
 - generally django is not used to create html like that in back, only for example it's showing that
 
+# Putting aside the Models
+- 
+
+# Working with templates
+- Integrating the sending of dictionary values from views.py while calling the views.
+- Integrating an html instead of creating the html on demand using HttpResponse
+  - Creating a templates directory at the root.
+  - Adding the template directory name in the DIR part of the Templates of the settings.py
+- Integrating two htmls together
+  - By creating another base html (base i.e. same for all)
+  - Adding jinja's {%  %} inside the htmls
 
 Few Commands for pipenv:
 - "pipenv --venv"

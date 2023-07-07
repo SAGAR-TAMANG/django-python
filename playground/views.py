@@ -3,8 +3,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def say_hello(request):
+def hello(request):
   return HttpResponse('Hello World', {'name' : 'SAGAR'})
 
-def hello(request):
-  return render(request, 'hello.html', {'name' : 'SAGAR'})
+def home(request):
+  return render(request, 'home.html', {'name' : 'SAGAR'})
