@@ -40,6 +40,19 @@ Steps I've Learnt:
   - By creating another base html (base i.e. same for all)
   - Adding jinja's {%  %} inside the htmls
 
+# Using GET Http Method: (Example: Addition of two numbers)
+- First, create one <form> that takes inputs with input type as "submit", 
+- The <form> should have "add" as the action, so the URL can recognize and call the "add"
+- The URL should point towards the views (User made function).
+- Create a function inside the view, that does the addition and send the output to a result.html. 
+
+# Using POST Http Method:
+- First, inside the <form> add a word "method='POST'"
+- Then, in the <form> add a jinja i.e., {% csrf_token %},
+  - This specifies that our html will use csrf to avoid any attacks
+- Then finally, change our function's (one inside the views.py) from GET to POST
+
 Few Commands for pipenv:
 - "pipenv --venv"
 > To view the address of the virtual environment.
+
