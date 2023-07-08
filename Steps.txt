@@ -65,17 +65,18 @@ Steps I've Learnt:
 
 # Using an index.html i.e., template (HTML/CSS/JS) downloaded from web:
 - First, put your index.html or other htmls that you will call on views into a template folder.
-  - Any folder you keep, it should be a template.
+  - Any folder you keep, it should be a template as defined inside the main setting.py.
 - Then, all the files that are required, like CSS, images, etc, of the HTML, keep it somewhere defined (Eg: Template).
 - Go to the main settings:
 - At the bottom, below the STATIC_URL add: 
   STATICFILES_DIRS = [
-      os.path.join(BASE_DIR, 'telusko/static') #Where the files can be found
+      os.path.join(BASE_DIR, 'telusko/static') #Where the other files (folder for index.html) can be found
   ]
   STATIC_ROOT = os.path.join(BASE_DIR, 'assets') # Here, assets is just a name where Django will put our static files
 - Then, go to the HTML you have, for us it's index.html, and in every path (eg: <a href="PATH") add one thing:
   - {% static 'PATH' %} # At every PATH mentioned in the HTML
 - {% load static %} # Also add this at the top of the HTML 
+- Then run: python manage.py collectstatic
 
 
 

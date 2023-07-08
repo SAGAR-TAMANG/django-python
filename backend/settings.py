@@ -70,7 +70,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -80,7 +79,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -116,9 +114,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIR = [
+   os.path.join(BASE_DIR, 'fitapp/static'), #Folder where you have stored your index.html's required folders
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets2') #Giving a name as we prefer (Eg: static or assets)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# print('Static DIR: ', BASE_DIR)
+# print('DIR + Staticfiles: ', os.path.join(BASE_DIR, 'Templates/static'))
+# print('NEW DIR:' + str(BASE_DIR) + "backend\static")
+# print('static URL:', STATIC_URL)
+# print('OUR STATIC PATH: ', BASE_DIR, 'backend\static')
+
+print('This is the base: ', BASE_DIR)
+print('I should keep my static files here: ', STATIC_ROOT)
