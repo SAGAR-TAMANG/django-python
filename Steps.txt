@@ -52,6 +52,37 @@ Steps I've Learnt:
   - This specifies that our html will use csrf to avoid any attacks
 - Then finally, change our function's (one inside the views.py) from GET to POST
 
+# Seperation of Concerns
+- Data, Layout, and Logic
+## MVT/ MTV Template
+- Model View Template
+- Data is linked to Model
+- DTL:
+  - Django Template Language
+- User<-->Django<-->URL<-->Views<-->Model & Template
+                                    Model<-->Data
+- MVC (Model View Controller)
+
+# Using an index.html i.e., template (HTML/CSS/JS) downloaded from web:
+- First, put your index.html or other htmls that you will call on views into a template folder.
+  - Any folder you keep, it should be a template.
+- Then, all the files that are required, like CSS, images, etc, of the HTML, keep it somewhere defined (Eg: Template).
+- Go to the main settings:
+- At the bottom, below the STATIC_URL add: 
+  STATICFILES_DIRS = [
+      os.path.join(BASE_DIR, 'telusko/static') #Where the files can be found
+  ]
+  STATIC_ROOT = os.path.join(BASE_DIR, 'assets') # Here, assets is just a name where Django will put our static files
+- Then, go to the HTML you have, for us it's index.html, and in every path (eg: <a href="PATH") add one thing:
+  - {% static 'PATH' %} # At every PATH mentioned in the HTML
+- {% load static %} # Also add this at the top of the HTML 
+
+
+
+
+
+
+
 Few Commands for pipenv:
 - "pipenv --venv"
 > To view the address of the virtual environment.
