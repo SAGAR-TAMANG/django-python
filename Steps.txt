@@ -78,11 +78,27 @@ Steps I've Learnt:
 - {% load static %} # Also add this at the top of the HTML 
 - Then run: python manage.py collectstatic
 
+# Creating object models to send multiple values together:
+- Create a file named models.py inside the app, if it's not created already (for our example: it's travel)
+- Inside the model, define a class with as many properties as you want.
+- These values will later be imported and called inside the views.
+- Then the views will send these to the HTML
+- From the HTML side you can receive the definite class and use the values of it.
+- You can create a short form for the phrase {% static = "folder" %}
+  - By mentioning this at the top of the code: 
+    {% static "folder" as WhateverURL}
+- How to use for loop or if else statement?
+  - For Loop:
+    {% for thing in thing %}
+    # Jargon Code
+    {% endfor %}
+  - if else:
+    {% if thing == thing %}
+    # Jargon Code
+    {% endif %}
 
-
-
-
-
+# Object Relatinal Mapping (ORM)
+- install "mysqlclient" for the Django to use MySQL
 
 Few Commands for pipenv:
 - "pipenv --venv"

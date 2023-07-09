@@ -32,12 +32,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'travel.apps.TravelConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'playground',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +75,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'travel_learn',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
     }
 }
 
@@ -116,9 +119,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIR = [
-   os.path.join(BASE_DIR, 'fitapp/static'), #Folder where you have stored your index.html's required folders
+   os.path.join(BASE_DIR, 'travel/static'), #Folder where you have stored your index.html's required folders
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets2') #Giving a name as we prefer (Eg: static or assets)
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets') #Giving a name as we prefer (Eg: static or assets)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
