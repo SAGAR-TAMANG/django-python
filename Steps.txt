@@ -113,6 +113,19 @@ Steps I've Learnt:
 # Creating a Super User in order to use "localhost:8000/admin" i.e. admin of our django
 - Run "python manage.py help" # In case you want to know the command
 - Run "python manage.py createsuperuser 
+
+# Admin Panel: (You (users) can view or modify the databases)
+- Go to the Admin URL, and log on using your super user id
+- If you get 'Model class django.contrib.sessions.models.Session' Error:
+  - Then put 'django.contrib.session' inside the INSTALLED_APPS sections of settings.py
+- If you get 'ProgrammingError at /admin/login/ (1146, ".django_session' doesn't exist")'
+  - Then you just forgot to migrate the sessions (the app you wrote in the INSTALLED_APPS sections)
+  - So, write, 'python manage.py migrate' 
+- Now, inside the 'MyApp/admin.py' you list/register your model there by passing the following code:
+  - from .models import MyModelName
+  - admin.site.register(MyModelName)
+
+# Add and Fetch data from a Database:
 - 
 
 Few Commands for pipenv:
