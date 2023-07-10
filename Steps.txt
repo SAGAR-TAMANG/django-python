@@ -110,7 +110,14 @@ Steps I've Learnt:
     price= models.IntegerField(max_length=10)
 - Run "python manage.py makemigrations" # Applying Migrations
 
+# Creating a Super User in order to use "localhost:8000/admin" i.e. admin of our django
+- Run "python manage.py help" # In case you want to know the command
+- Run "python manage.py createsuperuser 
+- 
+
 Few Commands for pipenv:
 - "pipenv --venv"
 > To view the address of the virtual environment.
 
+# Fresh Problem: 
+- Can not log into site/admin of django
