@@ -1,6 +1,6 @@
 Steps I've Learnt:
 
-- install pipenv, and django
+- install pipenv, django, pillow (for image in database)
 - run "pipenv install"
 - start django project by using "django-admin startproject project_name ."
   - the period at the end suggests that the project shall be created inside the current directory.
@@ -99,6 +99,16 @@ Steps I've Learnt:
 
 # Object Relatinal Mapping (ORM)
 - install "mysqlclient" for the Django to use MySQL
+- Inside the models.py change your normal class into a model by adding this:
+  - Normal Class:
+  class MyClassName:
+    name: str 
+    price: int
+  - Converted into a model:
+  class MyClassName(models.Model): # Find Details in "Django Model Field Reference" in Google
+    name= models.CharField(max_length=50)   # Notice how ':' has been changed to '='
+    price= models.IntegerField(max_length=10)
+- Run "python manage.py makemigrations" # Applying Migrations
 
 Few Commands for pipenv:
 - "pipenv --venv"

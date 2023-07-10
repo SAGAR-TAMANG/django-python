@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites'
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,6 +83,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
 
@@ -134,5 +138,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # print('static URL:', STATIC_URL)
 # print('OUR STATIC PATH: ', BASE_DIR, 'backend\static')
 
-print('This is the base: ', BASE_DIR)
-print('I should keep my static files here: ', STATIC_ROOT)
+print('This is the BASE_DIR: ', BASE_DIR)
+print('I should keep my static files here (STATIC_ROOT): ', STATIC_ROOT)
