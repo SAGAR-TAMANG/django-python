@@ -141,3 +141,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 print('This is the BASE_DIR: ', BASE_DIR)
 print('I should keep my static files here (STATIC_ROOT): ', STATIC_ROOT)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

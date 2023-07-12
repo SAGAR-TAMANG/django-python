@@ -126,7 +126,15 @@ Steps I've Learnt:
   - admin.site.register(MyModelName)
 
 # Add and Fetch data from a Database:
-- 
+- # Adding a default path (URL) for media: 
+  - put this in the settings:
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+  - Go to the urls.py, and add a new urlpatterns:
+    from django.conf import settings
+    from django.conf.urls import static
+    urlpatterns= urlpatterns + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+    
 
 Few Commands for pipenv:
 - "pipenv --venv"
