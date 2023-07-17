@@ -132,7 +132,7 @@ Steps I've Learnt:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
   - Go to the urls.py, and add a new urlpatterns:
     from django.conf import settings
-    from django.conf.urls import static
+    from django.conf.urls.static import static
     urlpatterns= urlpatterns + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
     
 
